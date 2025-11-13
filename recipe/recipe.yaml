@@ -1,6 +1,6 @@
 context:
   name: dns-lexicon
-  version: "3.21.1"
+  version: "3.23.0"
 
 package:
   name: ${{ name|lower }}
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/${{ name | replace('-', '_') }}-${{ version }}.tar.gz
-  sha256: 7cd19f692b384fe5eaa47cce334d24c78ae2eba1d2fb24d2b8a05e04fe294497
+  sha256: a729a3883f04a21918ed4331ded9f78bd132f5c520ffd74b645de9ad9382cf26
 
 build:
   noarch: python
@@ -33,7 +33,7 @@ requirements:
 tests:
   - python:
       imports:
-      - lexicon
+        - lexicon
       pip_check: true
       python_version: ${{ python_min }}.*
 
